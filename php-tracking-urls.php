@@ -22,6 +22,10 @@ function get_tracking_url($tracking_number) {
 			'url'=>'http://www.ontrac.com/trackres.asp?tracking_number=',
 			'reg'=>'/\b(C\d\d\d\d\d\d\d\d\d\d\d\d\d\d)\b/i'
 		),
+		array(
+			'url'=>'http://www.dhl.com/content/g0/en/express/tracking.shtml?brand=DHL&AWB=',
+			'reg'=>'/\b(\d\d\d\d ?\d\d\d\d ?\d\d)\b/i'
+		),
 	);
 
 	foreach ($php_tracking_urls as $item) {
