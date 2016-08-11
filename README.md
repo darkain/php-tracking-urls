@@ -9,6 +9,19 @@ Please see the examples folder for information on how to implment this library
 ---
 
 
+This library is used to convert package tracking numbers into their respective
+shipper's online tracking URL format. 
+
+Supported shippers:
+* United States Postal Service (USPS)
+* United Parcel Service (UPS)
+* Federal Express (FedEx)
+* OnTrac
+
+
+---
+
+
 Usage:
 ```php
 $tracking = '1Z9999W99999999999';
@@ -22,14 +35,3 @@ http://wwwapps.ups.com/WebTracking/processInputRequest?TypeOfInquiryNumber=T&Inq
 ```
 
 
----
-
-
-This library is used to convert package tracking numbers into their respective
-shipper's online tracking URL format. 
-
-Supported shippers:
-* United States Postal Service (USPS)
-* United Parcel Service (UPS)
-* Federal Express (FedEx)
-* OnTrac
