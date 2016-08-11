@@ -6,7 +6,23 @@ freely used in any project which is compatible with this license.
 Please see the examples folder for information on how to implment this library
 
 
-------------------------------------------------------------------------------
+---
+
+
+Usage:
+```php
+$tracking = '1Z9999W99999999999';
+$url = get_tracking_url($tracking);
+echo $url;
+```
+
+Output:
+```
+http://wwwapps.ups.com/WebTracking/processInputRequest?TypeOfInquiryNumber=T&InquiryNumber1=1Z9999W99999999999
+```
+
+
+---
 
 
 This library is used to convert package tracking numbers into their respective
