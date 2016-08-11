@@ -38,6 +38,6 @@ function get_tracking_url($tracking_number) {
 
 
 //Attach this to AltaForm if available
-if (isset($afurl)  &&  is_object($afurl)  &&  get_class($afurl)==='afurl') {
+if (!empty($afurl)  &&  is_a($afurl, 'afurl')) {
 	$afurl->tracking = 'get_tracking_url';
 }
