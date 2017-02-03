@@ -1,6 +1,8 @@
 <?php
 
 function get_tracking_url($tracking_number) {
+	if (empty($tracking_number)) return false;
+
 	$php_tracking_urls = array(
 		array(
 			'url'=>'http://wwwapps.ups.com/WebTracking/processInputRequest?TypeOfInquiryNumber=T&InquiryNumber1=',
@@ -33,6 +35,7 @@ function get_tracking_url($tracking_number) {
 		preg_match($item['reg'], $tracking_number, $match);
 		if (count($match)) return $item['url'] . $match[0];
 	}
+
 	return false;
 }
 
