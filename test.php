@@ -6,6 +6,7 @@ $errors = false;
 
 $numbers = [
 	//TEST UPS
+	'1Z9999W99999999999'			=> 'ups.com',
 	'1Z12345E1512345676'			=> 'ups.com',
 	'1Z12345E0205271688'			=> 'ups.com',
 	'1Z12345E6605272234'			=> 'ups.com',
