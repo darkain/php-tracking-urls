@@ -28,6 +28,7 @@ $numbers = [
 	'624893691092'					=> 'fedex.com',
 	'61299995669352455464'			=> 'fedex.com',
 	'61299995669151880177'			=> 'fedex.com',
+	'00408017007469'				=> 'fedex.com',
 
 	//TEST USPS
 	'9400 1000 0000 0000 0000 00'	=> 'usps.com',
@@ -63,6 +64,9 @@ $numbers = [
 	'12512345678'					=> 'dhl.com',
 	'SEA1234567'					=> 'dhl.com',
 	'LAX1234567'					=> 'dhl.com',
+
+	//INVALID TRACKING NUMBERS
+	'INVALID TRACKING NUMBER'		=> false,
 ];
 
 
@@ -76,8 +80,12 @@ foreach ($numbers as $number => $service) {
 			$errors = true;
 		}
 	} else {
-		echo "\n  ---  FAILED  ---  NO SERVICE FOUND  ---";
-		$errors = true;
+		if ($url === false  &&  $service === false) {
+			echo "\n  ---  NO SERVICE AVAILABLE FOR THIS VALUE  ---";
+		} else {
+			echo "\n  ---  FAILED  ---  NO SERVICE FOUND  ---";
+			$errors = true;
+		}
 	}
 	echo "\n\n";
 }

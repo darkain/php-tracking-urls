@@ -2,6 +2,7 @@
 
 function get_tracking_url($tracking_number) {
 	if (empty($tracking_number)) return false;
+	if (!is_string($tracking_number)  &&  !is_int($tracking_number)) return false;
 
 	static $tracking_urls = [
 		//UPS - UNITED PARCEL SERVICE
@@ -47,11 +48,24 @@ function get_tracking_url($tracking_number) {
 		],
 	];
 
+
+	//TEST EACH POSSIBLE COMBINATION
 	foreach ($tracking_urls as $item) {
 		$match = array();
 		preg_match($item['reg'], $tracking_number, $match);
-		if (count($match)) return $item['url'] . $match[0];
+		if (count($match)) {
+			return $item['url'] . preg_replace('/\s/', '', strtoupper($match[0]));
+		}
 	}
 
+
+	// TRIM LEADING ZEROES AND TRY AGAIN
+	// https://github.com/darkain/php-tracking-urls/issues/4
+	if (substr($tracking_number, 0, 1) === '0') {
+		return get_tracking_url(ltrim($tracking_number, '0'));
+	}
+
+
+	//NO MATCH FOUND, RETURN FALSE
 	return false;
 }
