@@ -14,7 +14,7 @@ function get_tracking_url($tracking_number) {
 		//USPS - UNITED STATES POSTAL SERVICE - FORMAT 1
 		[
 			'url'=>'https://tools.usps.com/go/TrackConfirmAction?qtc_tLabels1=',
-			'reg'=>'/\b((420 ?\d{5} ?)?(91|92|93|94|01|03|04|70|23|13)\d{2} ?\d{4} ?\d{4} ?\d{4} ?\d{4}( ?\d{2})?)\b/i'
+			'reg'=>'/\b((420 ?\d{5} ?)?(91|92|93|94|01|03|04|70|23|13)\d{2} ?\d{4} ?\d{4} ?\d{4} ?\d{4}( ?\d{2,6})?)\b/i'
 		],
 
 		//USPS - UNITED STATES POSTAL SERVICE - FORMAT 2
