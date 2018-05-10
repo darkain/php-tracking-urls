@@ -1,6 +1,6 @@
 <?php
 
-require_once('php-tracking-urls.php');
+require_once(__DIR__ . '/php-tracking-urls.php');
 
 $errors = false;
 
