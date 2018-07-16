@@ -1,0 +1,17 @@
+{
+	"name":			"darkain/php-tracking-urls",
+	"description":	"Converts package tracking numbers into URLs (UPS, FedEx, USPS, and more)",
+	"version":		"1.0.0",
+	"time":			"2018-07-16",
+	"keywords":		["usps", "ups", "fedex", "ontrac", "dhl", "package", "parcel", "tracking", "shipping"],
+	"license":		"BSD-2-Clause",
+	"readme":		"README.md",
+	"homepage":		"https://github.com/darkain/php-tracking-urls",
+	"require":		{"php":">=5.4"},
+	"authors":		[{
+		"name":		"Vincent Milum Jr",
+		"email":	"composer@darkain.com",
+		"homepage":	"https://darkain.com",
+		"role":		"Developer"
+	}]
+}
