@@ -1,5 +1,5 @@
 # PHP Package Tracking URL Library
-[![Build Status](https://travis-ci.com/github/darkain/php-tracking-urls.svg?branch=master)](https://travis-ci.com/github/darkain/php-tracking-urls)
+[![Build Status](https://travis-ci.com/darkain/php-tracking-urls.svg?branch=master)](https://travis-ci.com/github/darkain/php-tracking-urls)
 
 
 ## About
