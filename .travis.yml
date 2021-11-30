@@ -25,8 +25,6 @@ matrix:
   include:
     - php: 8.0
       dist: focal
-    - php: 8.1
-      dist: focal
     - php: nightly
       dist: focal
 
