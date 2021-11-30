@@ -10,8 +10,7 @@ php:
   - 7.1
   - 7.2
   - 7.3
-  - 7.4snapshot
-  - nightly
+  - 7.4
   - hhvm-3.12
   - hhvm-3.15
   - hhvm-3.18
@@ -22,10 +21,16 @@ php:
 
 matrix:
   allow_failures:
-    - php: 7.4snapshot
     - php: nightly
+  include:
+    - php: 8.0
+      dist: focal
+    - php: 8.1
+      dist: focal
+    - php: nightly
+      dist: focal
 
 before_script:
   - phpenv config-rm xdebug.ini || true
 
-script: "php test.php"
+script: "php test/cli.php"
